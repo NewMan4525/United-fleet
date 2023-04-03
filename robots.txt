@@ -1,0 +1,6 @@
+User-agent: *
+
+//Disallow: /search/
+//Disallow: /*sort=*
+Host: www.unitedfleet.space
+Sitemap: http://www.unitedfleet.space/sitemap.xml

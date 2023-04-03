@@ -1,0 +1,21 @@
+:root {
+	/* common */
+	--ratio: 1;
+
+	/* colors */
+	--prColor1: #F7E7A5;
+	--prColor2: #6EB3A2;
+	--prColor3: #252146;
+
+	/* arrows */
+	--arrow-nav-hw: 50px;
+
+	/* burger menu */
+	--bmenu-size: 50px;
+	--time-bMenu-anim: 0.3s;
+
+
+
+
+
+}

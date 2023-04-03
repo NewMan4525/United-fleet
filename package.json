@@ -1,0 +1,15 @@
+{
+  "name": "united-fleet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "gh repo clone NewMan4525/United-fleet"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,154 @@
+/* common */
+
+/* .arrow {} */
+
+/* path */
+
+.arrow-U {
+	clip-path: polygon(50% 0, 100% 50%, 100% 100%, 50% 50%, 0 100%, 0 50%);
+	shape-outside: polygon(50% 0, 100% 50%, 100% 100%, 50% 50%, 0 100%, 0 50%);
+}
+
+.arrow-D {
+	clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 50%, 50% 100%, 0 50%);
+	shape-outside: polygon(0 0, 50% 50%, 100% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.arrow-L {
+	clip-path: polygon(50% 0, 100% 0, 50% 50%, 100% 100%, 50% 100%, 0 50%);
+	shape-outside: polygon(50% 0, 100% 0, 50% 50%, 100% 100%, 50% 100%, 0 50%);
+}
+
+.arrow-R {
+	clip-path: polygon(0 0, 50% 0, 100% 50%, 50% 100%, 0 100%, 50% 50%);
+	shape-outside: polygon(0 0, 50% 0, 100% 50%, 50% 100%, 0 100%, 50% 50%);
+}
+
+/* size */
+
+/* .large-arrow {}
+
+.medium-arrow {} */
+
+.smoll-arrow {
+
+	height: var(--arrow-nav-hw);
+	width: var(--arrow-nav-hw);
+}
+
+.sub-arrow {
+	position: relative;
+	width: 85%;
+	height: 85%;
+	margin: 0 auto;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+/* colors style */
+
+.arrow-U {
+	background: linear-gradient(to top, var(--prColor2), var(--prColor3));
+}
+
+.arrow-D {
+	background: linear-gradient(to bottom, var(--prColor2), var(--prColor3));
+}
+
+.arrow-L {
+	background: linear-gradient(to left, var(--prColor2), var(--prColor3));
+}
+
+.arrow-R {
+	background: linear-gradient(to right, var(--prColor2), var(--prColor3));
+}
+
+/* sub-arrow */
+
+.arrow-U>.sub-arrow {
+	background: linear-gradient(to top, var(--prColor1), var(--prColor1));
+}
+
+.arrow-D>.sub-arrow {
+	background: linear-gradient(to bottom, var(--prColor1), var(--prColor1));
+}
+
+.arrow-L>.sub-arrow {
+	background: linear-gradient(to left, var(--prColor1), var(--prColor1));
+}
+
+.arrow-R>.sub-arrow {
+	background: linear-gradient(to right, var(--prColor1), var(--prColor1));
+}
+
+/* hover */
+
+.arrow-U:hover {
+	background: linear-gradient(to top, var(--prColor1), var(--prColor1));
+}
+
+.arrow-D:hover {
+	background: linear-gradient(to bottom, var(--prColor1), var(--prColor1));
+}
+
+.arrow-L:hover {
+	background: linear-gradient(to left, var(--prColor1), var(--prColor1));
+}
+
+.arrow-R:hover {
+	background: linear-gradient(to right, var(--prColor1), var(--prColor1));
+}
+
+/* hover 4 sub arrow */
+
+.arrow-U:hover>.sub-arrow {
+	background: linear-gradient(to top, var(--prColor2), var(--prColor3));
+}
+
+.arrow-D:hover>.sub-arrow {
+	background: linear-gradient(to bottom, var(--prColor2), var(--prColor3));
+}
+
+.arrow-L:hover>.sub-arrow {
+	background: linear-gradient(to left, var(--prColor2), var(--prColor3));
+}
+
+.arrow-R:hover>.sub-arrow {
+	background: linear-gradient(to right, var(--prColor2), var(--prColor3));
+}
+
+/* active */
+
+.arrow-U:active {
+	background: linear-gradient(to top, var(--prColor2), var(--prColor3));
+}
+
+.arrow-D:active {
+	background: linear-gradient(to bottom, var(--prColor2), var(--prColor3));
+}
+
+.arrow-L:active {
+	background: linear-gradient(to left, var(--prColor2), var(--prColor3));
+}
+
+.arrow-R:active {
+	background: linear-gradient(to right, var(--prColor2), var(--prColor3));
+}
+
+/* active 4 sub arrow */
+
+.arrow-U:active>.sub-arrow {
+	background: linear-gradient(to top, var(--prColor1), var(--prColor1));
+}
+
+.arrow-D:active>.sub-arrow {
+	background: linear-gradient(to bottom, var(--prColor1), var(--prColor1));
+}
+
+.arrow-L:active>.sub-arrow {
+	background: linear-gradient(to left, var(--prColor1), var(--prColor1));
+}
+
+.arrow-R:active>.sub-arrow {
+	background: linear-gradient(to right, var(--prColor1), var(--prColor1));
+}

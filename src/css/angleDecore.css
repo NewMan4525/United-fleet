@@ -1,0 +1,125 @@
+.angle-decore {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+
+	z-index: 1;
+
+}
+
+/* path */
+.angle-decore-LU {
+	clip-path: polygon(70% 0, 100% 0, 100% 10%, 75% 10%, 10% 75%, 10% 100%, 0 100%, 0 70%);
+	shape-outside: polygon(70% 0, 100% 0, 100% 10%, 75% 10%, 10% 75%, 10% 100%, 0 100%, 0 70%);
+}
+
+.angle-decore-RU {
+	clip-path: polygon(30% 0, 100% 70%, 100% 100%, 90% 100%, 90% 75%, 25% 10%, 0 10%, 0 0);
+	shape-outside: polygon(30% 0, 100% 70%, 100% 100%, 90% 100%, 90% 75%, 25% 10%, 0 10%, 0 0);
+}
+
+.angle-decore-LD {
+	clip-path: polygon(0 0, 10% 0, 10% 25%, 75% 90%, 100% 90%, 100% 100%, 70% 100%, 0 30%);
+	shape-outside: polygon(0 0, 10% 0, 10% 25%, 75% 90%, 100% 90%, 100% 100%, 70% 100%, 0 30%);
+}
+
+.angle-decore-RD {
+	clip-path: polygon(90% 0, 100% 0, 100% 30%, 30% 100%, 0 100%, 0 90%, 25% 90%, 90% 25%);
+	shape-outside: polygon(0 0, 10% 0, 10% 75%, 75% 90%, 100% 90%, 100% 100%, 70% 100%, 0 70%);
+}
+
+/* sub-angle path */
+
+.sub-angle-decore-LU {
+	clip-path: polygon(72% 2%, 98% 2%, 98% 8%, 73% 8%, 8% 73%, 8% 98%, 2% 98%, 2% 72%);
+	shape-outside: polygon(70% 0, 100% 0, 100% 10%, 75% 10%, 10% 75%, 10% 100%, 0 100%, 0 70%);
+}
+
+.sub-angle-decore-RU {
+	clip-path: polygon(28% 2%, 98% 72%, 98% 98%, 92% 98%, 92% 73%, 27% 8%, 2% 8%, 2% 2%);
+	shape-outside: polygon(28% 2%, 98% 72%, 98% 98%, 92% 98%, 92% 73%, 27% 8%, 2% 8%, 2% 2%);
+}
+
+.sub-angle-decore-LD {
+	clip-path: polygon(2% 2%, 8% 2%, 8% 27%, 73% 92%, 98% 92%, 98% 98%, 72% 98%, 2% 28%);
+	shape-outside: polygon(2% 2%, 8% 2%, 8% 27%, 73% 92%, 98% 92%, 98% 98%, 72% 98%, 2% 28%);
+}
+
+.sub-angle-decore-RD {
+	clip-path: polygon(92% 2%, 98% 2%, 98% 28%, 28% 98%, 2% 98%, 2% 92%, 27% 92%, 92% 27%);
+	shape-outside: polygon(0 0, 10% 0, 10% 75%, 75% 90%, 100% 90%, 100% 100%, 70% 100%, 0 70%);
+}
+
+
+/* parent */
+.angle-decore-LU {
+	top: 0;
+	left: 0;
+	background-color: var(--prColor3);
+
+}
+
+
+.angle-decore-RU {
+	top: 0;
+	right: 0;
+	background-color: var(--prColor3);
+
+}
+
+.angle-decore-LD {
+	left: 0;
+	bottom: 0;
+	background-color: var(--prColor3);
+
+}
+
+
+.angle-decore-RD {
+	right: 0;
+	bottom: 0;
+	background-color: var(--prColor3);
+
+}
+
+/* sub-angle-decore */
+
+.sub-angle-decore-LU,
+
+.sub-angle-decore-RU,
+
+.sub-angle-decore-LD,
+
+.sub-angle-decore-RD {
+	background-color: red;
+}
+
+
+
+
+
+.sub-angle-decore-LU {
+	background-color: var(--prColor2);
+}
+
+.sub-angle-decore-RU {
+	background-color: var(--prColor2);
+}
+
+.sub-angle-decore-LD {
+	background-color: var(--prColor2);
+}
+
+.sub-angle-decore-RD {
+	background-color: var(--prColor2);
+
+}
+
+
+.angle-decore-LU,
+
+.angle-decore-RU,
+
+.angle-decore-LD,
+
+.angle-decore-RD {}

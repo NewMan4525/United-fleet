@@ -1,0 +1,26 @@
+.table {
+
+	position: relative;
+	top: 50%;
+	transform: translate(0, -50%);
+	width: 100%;
+	height: 90%;
+	background-color: grey;
+	margin: 0 auto;
+	text-align: center;
+	z-index: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	background-color: var(--prColor2);
+
+}
+
+.subtable {
+	position: relative;
+	width: 98%;
+	height: 98%;
+	background-color: grey;
+	overflow: hidden;
+}

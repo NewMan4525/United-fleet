@@ -1,0 +1,35 @@
+#b_menu,
+#b_menu-elems {
+	display: flex;
+	align-items: center;
+}
+
+#b_menu {
+	border-radius: 50%;
+	width: var(--bMenu-size);
+	height: var(--bMenu-size);
+	cursor: pointer;
+	justify-content: center;
+	transition: background var(--time-bMenu-anim);
+}
+
+#b_menu-elems {
+	width: calc(var(--bMenu-size)*0.7);
+	height: calc(var(--bMenu-size)*0.7);
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.b_menu-elem {
+
+	position: relative;
+	height: 10%;
+	width: 100%;
+	background-color: var(--prColor3);
+	transition: transform var(--time-bMenu-anim);
+}
+
+#b_menu:hover {
+	background-color: grey;
+	transition: background var(--time-bMenu-anim);
+}
