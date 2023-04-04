@@ -1,3 +1,18 @@
+
+$url-rogan: './fonts/Rogan/';
+
+@font-face {
+    font-family: 'Rogan';
+    src: url($url-rogan+'Rogan-SemiBold.eot');
+    src: local('Rogan SemiBold'), local($url-rogan+'Rogan-SemiBold'),
+        url($url-rogan+'Rogan-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url($url-rogan+'Rogan-SemiBold.woff2') format('woff2'),
+        url($url-rogan+'Rogan-SemiBold.woff') format('woff'),
+        url($url-rogan+'Rogan-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
 $font-stack: Helvetica, sans-serif;
 $primary-color: green;
 

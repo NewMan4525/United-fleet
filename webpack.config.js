@@ -1,12 +1,35 @@
  const path = require('path');
+ const HtmlWebpackPlugin = require('html-webpack-plugin');
+ //  const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
  module.exports = {
  	context: path.resolve(__dirname, 'src'),
  	entry: './index.js',
+
+
+
+
+
  	output: {
  		filename: 'bundle.js',
  		path: path.resolve(__dirname, 'dist'),
  	},
+
+
+
+ 	plugins: [
+ 		new HtmlWebpackPlugin({
+ 			template: path.join(__dirname, 'src/index.pug'),
+ 			filename: 'index.html',
+ 		}),
+
+ 		// new MiniCssExtractPlugin({
+ 		// 	filename: "[name].css"
+ 		// }),
+
+ 	],
+
+
  	module: {
  		rules: [{
  				test: /\.css$/i,
@@ -34,11 +57,19 @@
  					}
  				}
  			},
+ 			{
+ 				test: /\.pug$/,
+ 				use: '@webdiscus/pug-loader',
+ 			},
 
-
+ 			// {
+ 			// 	test: /\.css$/i,
+ 			// 	use: [MiniCssExtractPlugin.loader, "css-loader"],
+ 			// },
 
  		],
  	},
+
 
 
  	devServer: {
