@@ -1,52 +1,67 @@
  const path = require('path');
+ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
  const HtmlWebpackPlugin = require('html-webpack-plugin');
- //  const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
  module.exports = {
  	context: path.resolve(__dirname, 'src'),
- 	entry: './index.js',
-
-
-
-
-
- 	output: {
- 		filename: 'bundle.js',
- 		path: path.resolve(__dirname, 'dist'),
+ 	mode: 'development',
+ 	entry: {
+ 		bundle: './index.js',
  	},
 
-
+ 	output: {
+ 		path: path.resolve(__dirname, 'dist'),
+ 		filename: '[name].js'
+ 	},
 
  	plugins: [
- 		new HtmlWebpackPlugin({
- 			template: path.join(__dirname, 'src/index.pug'),
- 			filename: 'index.html',
+ 		new MiniCssExtractPlugin({
+ 			filename: '[name].css'
  		}),
 
- 		// new MiniCssExtractPlugin({
- 		// 	filename: "[name].css"
- 		// }),
+ 		require('autoprefixer'),
+
+ 		new HtmlWebpackPlugin({
+ 			template: './index.pug'
+ 		}),
 
  	],
 
-
  	module: {
  		rules: [{
- 				test: /\.css$/i,
- 				use: ['style-loader', 'css-loader'],
+ 				test: /\.css$/,
+ 				use: [{
+ 						loader: MiniCssExtractPlugin.loader,
+ 						options: {
+ 							publicPath: './dist/'
+ 						}
+ 					},
+ 					'css-loader'
+ 				]
  			},
  			{
- 				test: /\.s[ac]ss$/i,
+ 				test: /\.scss$/,
  				use: [
- 					// Creates `style` nodes from JS strings
- 					"style-loader",
- 					// Translates CSS into CommonJS
- 					"css-loader",
- 					// Compiles Sass to CSS
- 					"sass-loader",
- 				],
+ 					MiniCssExtractPlugin.loader,
+ 					'css-loader',
+ 					{
+ 						loader: 'sass-loader',
+ 						options: {
+ 							implementation: require('sass'),
+
+ 						}
+ 					}
+ 				]
+ 			},
+ 			{
+ 				test: /\.css$/,
+ 				use: ['style-loader', 'css-loader', 'postcss-loader']
  			},
 
+ 			{
+ 				test: /\.pug$/,
+ 				use: 'pug-loader'
+ 			},
  			{
  				test: /\.m?js$/,
  				exclude: /node_modules/,
@@ -57,19 +72,11 @@
  					}
  				}
  			},
- 			{
- 				test: /\.pug$/,
- 				use: '@webdiscus/pug-loader',
- 			},
 
- 			// {
- 			// 	test: /\.css$/i,
- 			// 	use: [MiniCssExtractPlugin.loader, "css-loader"],
- 			// },
 
- 		],
+ 			// Other rules...
+ 		]
  	},
-
 
 
  	devServer: {
